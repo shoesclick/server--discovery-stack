@@ -8,10 +8,10 @@ spec:
   selector:
       app: server--discovery-stack
   ports:
-    - port: 5000
-      name: http-5000
+    - port: 8762
+      name: http-8762
       protocol: TCP
-      targetPort: 5000
+      targetPort: 8762
     - port: 9090
       name: http-prometheus
       protocol: TCP
