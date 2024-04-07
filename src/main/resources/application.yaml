@@ -1,0 +1,30 @@
+server:
+  port: 8762
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  instance:
+    hostname: localhost
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health, shutdown, prometheus
+  endpoint:
+    shutdown:
+      enabled: true
+      health:
+        show-details: always
+        probes:
+          enabled: true
+        group:
+          readiness:
+            include: diskSpace
+
