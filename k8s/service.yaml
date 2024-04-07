@@ -4,7 +4,7 @@ metadata:
   name: svc-server--discovery-stack
   namespace: shoes-eks
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
       app: server--discovery-stack
   ports:
