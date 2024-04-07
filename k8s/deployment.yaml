@@ -19,8 +19,6 @@ spec:
             env:
               - name: SPRING_PROFILES_ACTIVE
                 value: "dev"
-              - name: CONFIG_SERVER
-                value: "http://svc-swapiconfigserver.shoes-eks.svc.cluster.local/config/"
             ports:
               - containerPort: 5000
               - containerPort: 9090
