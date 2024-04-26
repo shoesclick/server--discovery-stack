@@ -13,8 +13,8 @@ WORKDIR /app
 ENV JAVA_OPTS "$JAVA_OPTS \
     -Duser.timezone=America/Fortaleza \
     -XX:ActiveProcessorCount=2 \
-    -XX:+UseG1GC \
-    -XX:+MaxRAMPercentage=50"
+    -XX:+UseParallelGC \
+    -XX:+MaxRAMPercentage=75"
 
 EXPOSE 8762 9190
 
